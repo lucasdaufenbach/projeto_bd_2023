@@ -149,18 +149,36 @@ go
 select *from funcionario
 
 /*Populando tabela Pagamento*/
-INSERT INTO pagamento (idcomanda, valor_pago, datahora_pagamento) VALUES
-(1, 50.00, '2023-11-28T10:30:00'),
-(2, 75.50, '2023-11-28T12:15:00'),
-(3, 120.00, '2023-11-28T15:45:00'),
-(4, 90.25, '2023-11-28T18:20:00'),
-(5, 200.00, '2023-11-28T20:00:00'),
-(6, 45.80, '2023-11-29T09:45:00'),
-(7, 150.00, '2023-11-29T13:30:00'),
-(8, 80.00, '2023-11-29T17:15:00'),
-(9, 95.75, '2023-11-30T11:00:00'),
-(10, 110.50, '2023-11-30T14:45:00');
-select * from pagamento
+insert into pagamento values(1, 101, 50.00, '2023-01-01 12:30:00');
+go
+
+insert into pagamento values(2, 102, 75.50, '2023-01-02 15:45:00');
+go
+
+insert into pagamento values(3, 103, 30.25, '2023-01-03 18:20:00');
+go
+
+insert into pagamento values(4, 104, 45.75, '2023-01-04 21:10:00');
+go
+
+insert into pagamento values(5, 105, 90.00, '2023-01-05 09:00:00');
+go
+
+insert into pagamento values(6, 106, 120.50, '2023-01-06 14:15:00');
+go
+
+insert into pagamento values(7, 107, 55.25, '2023-01-07 17:30:00');
+go
+
+insert into pagamento values(8, 108, 80.75, '2023-01-08 20:45:00');
+go
+
+insert into pagamento values(9, 109, 95.25, '2023-01-09 23:55:00');
+go
+
+insert into pagamento values(10, 110, 60.00, '2023-01-10 11:05:00');
+go
+
 
 TABELA COMANDA
 -- 1
