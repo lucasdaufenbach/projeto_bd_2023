@@ -1,17 +1,16 @@
-teste
-DROP FUNCTION IF EXISTS fn_count_apolices
-GO
-
-CREATE FUNCTION fn_count_apolices (@cod_cliente int)
-RETURNS int
+CREATE FUNCTION fn_CalcularTotalPedido
+(
+    @idcomanda INT
+)
+RETURNS NUMERIC
 AS
 BEGIN
-	DECLARE @resultado int
+    DECLARE @total NUMERIC;
 
-	SELECT @resultado = COUNT(cod_apolice)
-	FROM apolice
-	WHERE cod_cliente = @cod_cliente
+    SELECT @total = SUM(c.valor * p.qtde)
+    FROM pedidos p
+    INNER JOIN cardapio c ON p.idcardapio = c.idcardapio
+    WHERE p.idcomanda = @idcomanda;
 
-	RETURN @resultado
-END
-GO
+    RETURN ISNULL(@total, 0);
+END;
