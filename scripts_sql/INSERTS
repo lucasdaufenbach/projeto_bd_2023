@@ -160,7 +160,7 @@ INSERT INTO pagamento (idcomanda, valor_pago, datahora_pagamento) VALUES
 (8, 80.00, '2023-11-29T17:15:00'),
 (9, 95.75, '2023-11-30T11:00:00'),
 (10, 110.50, '2023-11-30T14:45:00');
-select *from pagamento
+select * from pagamento
 
 TABELA COMANDA
 -- 1
@@ -194,32 +194,33 @@ INSERT INTO comanda (datahora_entrada, idmesa, idcliente) VALUES ('2023-12-04 16
 INSERT INTO comanda (datahora_entrada, idmesa, idcliente) VALUES ('2023-12-04 16:30:00', 10, 110);
 
 INSERT PEDIDO
--- 1
-INSERT INTO pedidos (idcomanda, idcardapio, qtde) VALUES (1, 101, 2);
+insert into pedidos values(1, 101, 201, 2);
+go
 
--- 2
-INSERT INTO pedidos (idcomanda, idcardapio, qtde) VALUES (1, 102, 1);
+insert into pedidos values(2, 102, 202, 1);
+go
 
--- 3
-INSERT INTO pedidos (idcomanda, idcardapio, qtde) VALUES (2, 103, 3);
+insert into pedidos values(3, 103, 203, 3);
+go
 
--- 4
-INSERT INTO pedidos (idcomanda, idcardapio, qtde) VALUES (3, 104, 1);
+insert into pedidos values(4, 104, 204, 2);
+go
 
--- 5
-INSERT INTO pedidos (idcomanda, idcardapio, qtde) VALUES (3, 105, 2);
+insert into pedidos values(5, 105, 205, 1);
+go
 
--- 6 (Repetição do Pedido 1)
-INSERT INTO pedidos (idcomanda, idcardapio, qtde) VALUES (1, 101, 2);
+insert into pedidos values(6, 106, 206, 3);
+go
 
--- 7
-INSERT INTO pedidos (idcomanda, idcardapio, qtde) VALUES (4, 106, 1);
+insert into pedidos values(7, 107, 207, 2);
+go
 
--- 8
-INSERT INTO pedidos (idcomanda, idcardapio, qtde) VALUES (5, 107, 2);
+insert into pedidos values(8, 108, 208, 1);
+go
 
--- 9 (Repetição do Pedido 3)
-INSERT INTO pedidos (idcomanda, idcardapio, qtde) VALUES (2, 103, 3);
+insert into pedidos values(9, 109, 209, 3);
+go
 
--- 10
-INSERT INTO pedidos (idcomanda, idcardapio, qtde) VALUES (6, 108, 1);
+insert into pedidos values(10, 110, 210, 2);
+go
+select * from pedidos
