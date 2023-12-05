@@ -78,10 +78,11 @@ CREATE TABLE pagamento (
     constraint fk_pagamento_comanda foreign key(idcomanda)
     references comanda (idcomanda)
 );
-
+go
 CREATE TABLE funcionario(
     idfuncionario     int identity(1,1)   primary key,
     nome              varchar(50)          not null,
     cargo             varchar(50)          not null,
     salario           numeric(10,2)        not null,
 );
+go
