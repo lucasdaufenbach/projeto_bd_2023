@@ -1,3 +1,4 @@
+teste
 DROP FUNCTION IF EXISTS fn_count_apolices
 GO
 
